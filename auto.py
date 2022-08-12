@@ -77,6 +77,7 @@ class DaKa:
         new_info['name'] = name
         new_info['number'] = number
         new_info['area'] = area
+        new_info['phone'] = '15630069232'
         new_info["date"] = __get_date()
         new_info["created"] = round(time.time())
         new_info['city'] = geo_obj['city']
