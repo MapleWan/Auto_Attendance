@@ -64,7 +64,7 @@ class DaKa:
         res1 = self.sess.get(self.base_url, verify=False)
         content1 = res1.content.decode()
         data1 = re.findall(r'def = {[\s\S]*?};', content1)[0]
-
+        print(data1)
         jsontext = eval(data1[data1.find("{"):data1.rfind(";")].replace(" ", ""))
         geo_text = jsontext['geo_api_info']
         geo_text = geo_text.replace("false", "False").replace("true", "True")
